@@ -1,0 +1,12 @@
+README.md
+setup.py
+bin/credsleuth
+credsleuth/__init__.py
+credsleuth/__init__.pyc
+credsleuth/rules.json
+credsleuth/sample.txt
+credsleuth.egg-info/PKG-INFO
+credsleuth.egg-info/SOURCES.txt
+credsleuth.egg-info/dependency_links.txt
+credsleuth.egg-info/top_level.txt
+test/test.py

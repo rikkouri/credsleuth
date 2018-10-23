@@ -1,0 +1,43 @@
+[default]
+aws_access_key_id = AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+USERNAME="Joe Bloggs"
+PASSWORD="FakePAssWord123
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAsVTaI451UcHVFhkpeJUGjx0+aFbdqG4wRZbpgSBZMNAgKxHC
+b9Gw97v+ipwEptiJ5YyAcgKLtlQuGYCmWZJNg865fJmKl4jXw6h6VvxvGSDLeJzZ
+vgd+DY8Np7DavO2WnR0VG63s/HHMNuzK15QHDZjqEblkltN4JoLbgsk5w6S19QMt
+0Feu2cuJw8V0rwmaDvM7yl8HCm6pSSGR9PAwQmP6AB+gNLlIhgUJfzNVke0fhKe/
+Phw29EeqU8avmOBEDTxkIac9XPHZ4NySZ22s+4pEYtQTToB+VVECcpFzHaF6op1f
+MPbBxTE9GmcB0viGlqGFfw9L9BzTXCIJtWEacwIDAQABAoIBAG1v3TOGTjbHdXau
+zp4g8ixOMt53hVHVtqqrqK1Mxl5OgxuxWRpjAWDRvxPRlzlUdz2XyQkTMx+xscWB
+VKgAlx/Z6zTPGO3NwMJ57g5Mos2kqLZlricNPqileRrdFRD1WzbY5NbxLkjY/duD
+pOcH7pZgoUuQ61f9Z6/0n/2Fq8VlkOz1lFdFa7Fu5VYn7GlL5Pa0aVHYPl3FCvan
+J5BCS9d/XCgVHC6SBnczIX+JDZoKU1VK/jKAAdfEo7VvCPhlmTEswPM6n3JGOZd3
+0C8DNYC1IlutdCimbi9Qd6o3YCw5sBy5gyVaPe3uwn2aAjT6jm1GHXtjt007qhFu
+5W9QqcECgYEA2eSR7gTZgIOu+0No0DYYByncgNmHEfmFyGW2nY8xksrY9gBSBOMH
+UzgCEl+Eq4QLE/KobD3CVdu5J1MT+vA7YInG/Uw+gLUP7uBuVbb1xc6jh+EXYCZE
+yBRwgZvzpMpUQ8MZmfbrYu6GQXZQTOYkCPE/GH3eUpGtx1idwVY8h2ECgYEA0FhH
+qxNxWeXB+bYpZQK5XY7aJ+2jIrVmemOVtAxb7hAXToO922bfZElF9aUORzEeyBFV
+d30BLj+mxr3Qor/odao/IyulZTg2NBw9gGEF9f/zbt6K6y+cHM6UXWaok5IFuDWO
+HSBjXm6uX3mm6jOIcdLNWL8tx5io1yee8zfq9lMCgYEAj58nyVoM+7bQ2fHe3o8p
+W19uZsf7Tg/I7QSOUGCYboeMsi2jO7FhnKroQrAPRPauTqG9/krfE7TW4GLUYq2C
+lel67m8ZK8EtFWl9kKYebhn8lI372HahE7jVR7lB6bcrv9aTw3aMRROwDuorl+SC
+kBpkWoJszsQTZbi1k0CCeUECgYBBuGc7FtH9upUasRSTsW1JjuNQDw0TyMb/umQh
+vHhPOzIu6S29hNDY8Kgp2ZwMZvk/wQAFxh/WN+vi60Nh40lvvHlYHc95g2bNv07D
+LVfVBp0Cjx6hG46SI7P3Voe8rSYyumoO1AWkZyOIKHa3j/Pte8KcyQmm2YgA/pWM
+QUpT0wKBgC2eGvGyu7u3JchY4d8ovGqvRBW5Y8NLN5dL5RbkdPTqFzrUOcdjUVl4
+pGsyLPBPGBRUHyz3Dl56jP9RBAcsrQhEW93ik+B5XmieTk59GeQDthC49ew3iLJ+
+B+voJcLgmAXSZq+aRHvfF/O/rqz+GibnK0CMpxCkUskkaN5e/fVK
+-----END RSA PRIVATE KEY-----
+
+
+A bunch of normal text which should not return any issues.
+Lorem ipsum dolor sit amet, mel libris scriptorem dissentiunt
+ne, cu vis prima tantas, solet efficiendi reprehendunt sit ex.
+Per ei quem tollit comprehensam, cetero option ei vis, amet
+nihil laboramus ut usu. Facer epicuri qui ea, dolore inimicus
+usu ei, usu et eripuit voluptaria repudiandae. Vis et quidam
+omnium nusquam.

@@ -1,0 +1,67 @@
+#!python
+
+import csv
+import json
+import sys
+import argparse
+
+from credsleuth import ConfigEngine, check_file
+
+
+class Output:
+
+    @staticmethod
+    def csv(data):
+        fieldnames = ['line_number', 'name', 'data']
+        writer = csv.DictWriter(sys.stdout, fieldnames=fieldnames)
+
+        writer.writeheader()
+
+        for line in data:
+            writer.writerow({
+                'line_number': line['line_number'],
+                'name': line['name'],
+                'data': line['data']
+            })
+
+    @staticmethod
+    def grep(data):
+        raise NotImplementedError
+
+    @staticmethod
+    def json(data):
+        print(json.dumps(data, default=lambda o: '<not serializable>'))
+
+    @staticmethod
+    def console(data):
+        for result in data:
+            print("{:=^50s}".format(" " + result['name'] + " "))
+            print("Line {}:".format(result['line_number']))
+            print("{}".format(result['short_data']))
+
+
+parser = argparse.ArgumentParser(
+    description="Identify potential secrets and credentials in files.",
+    prog="credsleuth",
+    usage="%(prog)s file.txt")
+
+parser.add_argument('--rules', action="store", help="Use custom rules", dest='rules_file')
+parser.add_argument('-v', '--verbose', action="store_true", help="Verbose logging")
+parser.add_argument('filename', action="store", help="Target file to scan")
+group = parser.add_mutually_exclusive_group()
+group.add_argument('-J', '--json', action="store_true", help="Output to JSON")
+group.add_argument('-C', '--csv', action="store_true", help="Output to CSV")
+group.add_argument('-G', '--grep', action="store_true", help="Output greppable results")
+args = parser.parse_args()
+
+config = ConfigEngine(args)
+results = check_file(config.filename, config)
+
+if args.json:
+    Output.json(results)
+elif args.csv:
+    Output.csv(results)
+elif args.grep:
+    Output.grep(results)
+else:
+    Output.console(results)
