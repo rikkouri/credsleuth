@@ -151,7 +151,7 @@ class ConfigEngine(object):
 
         for attr, value in vars(attributes).items():
             if hasattr(self, attr)\
-                    and value != None:
+                    and value is None:
                 setattr(self, attr, value)
 
     @property
