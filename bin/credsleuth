@@ -36,26 +36,29 @@ class Output:
     def console(data):
         for result in data:
             print("{:=^50s}".format(" " + result['name'] + " "))
-            print("Line {}:".format(result['line_number']))
+            print("{}:{}".format(result['filename'], result['line_number']))
             print("{}".format(result['short_data']))
 
 
 parser = argparse.ArgumentParser(
     description="Identify potential secrets and credentials in files.",
     prog="credsleuth",
-    usage="%(prog)s file.txt")
+    usage="%(prog)s filename.txt ...")
 
-parser.add_argument('--rules', action="store", help="Use custom rules", dest='rules_file')
+parser.add_argument('--rules',         action="store", help="Use custom rules", dest='rules_file')
 parser.add_argument('-v', '--verbose', action="store_true", help="Verbose logging")
-parser.add_argument('filename', action="store", help="Target file to scan")
+parser.add_argument('files',           nargs='+', help="Target file(s) to scan")
 group = parser.add_mutually_exclusive_group()
-group.add_argument('-J', '--json', action="store_true", help="Output to JSON")
-group.add_argument('-C', '--csv', action="store_true", help="Output to CSV")
-group.add_argument('-G', '--grep', action="store_true", help="Output greppable results")
+group.add_argument('-J', '--json',     action="store_true", help="Output to JSON")
+group.add_argument('-C', '--csv',      action="store_true", help="Output to CSV")
+group.add_argument('-G', '--grep',     action="store_true", help="Output greppable results")
 args = parser.parse_args()
 
 config = ConfigEngine(args)
-results = check_file(config.filename, config)
+results = []
+
+for file in args.files:
+    results.extend(check_file(file, config))
 
 if args.json:
     Output.json(results)
