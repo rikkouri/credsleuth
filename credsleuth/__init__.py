@@ -125,8 +125,8 @@ class Matcher:
                         'filename': self.filename,
                         'match': match,
                         'name': rule['name'],
-                        'data': match.group(0),
-                        'short_data': self.__truncate_middle(match.group(0))
+                        'data': match.group(0).strip(),
+                        'short_data': self.__truncate_middle(match.group(0).strip())
                 })
 
         return issues
