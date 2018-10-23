@@ -125,8 +125,8 @@ class Matcher:
                         'filename': self.filename,
                         'match': match,
                         'name': rule['name'],
-                        'data': match.group(0),
-                        'short_data': self.__truncate_middle(match.group(0))
+                        'data': match.group(0).strip(),
+                        'short_data': self.__truncate_middle(match.group(0).strip())
                 })
 
         return issues
@@ -151,7 +151,7 @@ class ConfigEngine(object):
 
         for attr, value in vars(attributes).items():
             if hasattr(self, attr)\
-                    and value != None:
+                    and value is None:
                 setattr(self, attr, value)
 
     @property
