@@ -14,6 +14,7 @@ name = 'credsleuth'
 class RulesEngine(object):
 
     __rules = []
+    __rules_json = []
 
     def __init__(self, rules=[]):
         self.rules = rules
@@ -49,10 +50,16 @@ class RulesEngine(object):
             except KeyError:
                 pass
 
+            try:
+                confidence = int(rule['confidence'])
+            except KeyError or ValueError:
+                confidence = 50
+
             self.__rules.append(
                 {
                     "name": rule['name'],
-                    "search": re.compile(template.format(rule['search']), flags)
+                    "search": re.compile(template.format(rule['search']), flags),
+                    "confidence": confidence
                 }
             )
 
@@ -126,7 +133,8 @@ class Matcher:
                         'match': match,
                         'name': rule['name'],
                         'data': match.group(0).strip(),
-                        'short_data': self.__truncate_middle(match.group(0).strip())
+                        'short_data': self.__truncate_middle(match.group(0).strip()),
+                        'confidence': rule['confidence']
                 })
 
         return issues
