@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="credsleuth",
-    version="0.0.18",
+    version="0.0.19",
     author="Dave Davison",
     author_email="dave.davison@hotmail.com",
     description="A rule based library to help identify credentials and secrets in files and strings.",

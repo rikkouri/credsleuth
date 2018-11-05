@@ -2,6 +2,7 @@
     {
          "name": "Example Rule",
          "search": "",
+         "confidence": 50,
          "ignoreCase": true,
          "enabled": false
     },
@@ -33,11 +34,13 @@
     },
     {
          "name": "AWS API Key",
-         "search": "AKIA[0-9A-Z]{16}"
+         "search": "AKIA[0-9A-Z]{16}",
+         "confidence": 80
     },
     {
          "name": "Heroku API Key",
          "search": "[h|H][e|E][r|R][o|O][k|K][u|U].*[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}"
+         "confidence": 80
     },
     {
          "name": "Generic Secret",
@@ -45,11 +48,13 @@
     },
     {
          "name": "MySQL Connection String",
-         "search": "(.*mysql.*-p.+)"
+         "search": "(.*mysql.*-p.+)",
+         "confidence": 30
     },
     {
         "name": "Suspect Variable",
         "search": "(\\buser.+\\b|\\bpass.+\\b)\\s?=\\s?.*",
-        "ignoreCase": true
+        "ignoreCase": true,
+        "confidence": 30
     }
 ]
