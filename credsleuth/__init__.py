@@ -66,7 +66,7 @@ class RulesEngine(object):
         return self.rules
 
     def __iter__(self):
-        self.n = 1
+        self.n = 0
         while self.n < len(self.__rules):
             yield self.__rules[self.n]
             self.n += 1
