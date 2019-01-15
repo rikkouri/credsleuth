@@ -7,11 +7,11 @@ setuptools.setup(
     name="credsleuth",
     version="0.0.19",
     author="Dave Davison",
-    author_email="dave.davison@hotmail.com",
+    author_email="dave.davison@sophos.com",
     description="A rule based library to help identify credentials and secrets in files and strings.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/rikkouri/credsleuth",
+    url="https://github.com/sophos-cybersecurity/credsleuth",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

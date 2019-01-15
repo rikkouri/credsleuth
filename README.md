@@ -1,5 +1,15 @@
 # Credential Sleuth
+[![PyPI version](https://badge.fury.io/py/credsleuth.svg)](https://badge.fury.io/py/credsleuth)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Generic badge](https://img.shields.io/badge/version-0.0.1_(use_at_risk)-red.svg)](https://shields.io/)
+
 A rule driven library for detecting secrets and credentials within files and strings.
+
+## Installation
+```bash
+pip install --user credsleuth
+```
+
 
 ## Simple Usage
 ### Finding secrets in a string:
@@ -41,15 +51,14 @@ config.rules_file = 'custom_rules.json'
 credsleuth.check_file('filename.txt', config)
 ```
 
-## Installation
-`pip install --user credsleuth`
-
 ## Writing Rules
 See `rules.json` for an example in extending rules definitions. 
 
 ## Todo
-- Add some comments to codebase
+- Improve basic ruleset to be less noisy.
+- Probably add some comments to codebase
 - Add pretty output options for command line execution.
 - Write a proper read me.
 - Build model to detect credentials based upon entropy
-- Search multiple files
+- Search multiple files from CLI - Done
+- Write some proper examples
